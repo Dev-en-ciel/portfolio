@@ -84,7 +84,6 @@
   /* Section hero */
   .hero-section {
     padding: 8rem 2rem 4rem;
-    /* background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%); */
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -263,8 +262,10 @@
       padding: 1rem;
       height: 70px;
     }
+    .title-container{
+        width: 65%;
+    }
     .title-container h1 {
-        background-color: antiquewhite;
         font-size: 1.3rem;
     }
 
@@ -303,6 +304,14 @@
   }
 
   @media (max-width: 480px) {
+    .title-container h1 {
+        font-size: 1rem;
+    }
+
+    .title-container span {
+        font-size: 0.8rem;
+    }
+
     .hero-title h1 {
       font-size: 2rem;
     }
