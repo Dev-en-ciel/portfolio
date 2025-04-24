@@ -45,18 +45,21 @@ document.querySelectorAll('.name li').forEach((letter, index) => {
     letter.style.animationDelay = `${index * 0.1}s`;
 });
 
-// Initialisation
-document.addEventListener('DOMContentLoaded', () => {
-    handleResponsiveLayout();
-    
-    // Gestion du retour en haut
-    const returnButton = document.querySelector('.return-to-top');
-    window.addEventListener('scroll', () => {
-        returnButton.style.display = window.scrollY > 300 ? 'flex' : 'none';
-    });
-    
-    returnButton.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+const returnButton = document.querySelector('.return-to-top');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+        returnButton.classList.add('visible');
+    } else {
+        returnButton.classList.remove('visible');
+    }
+});
+
+returnButton.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
     });
 });
 
@@ -71,4 +74,6 @@ window.addEventListener('resize', () => {
         body.style.overflow = 'auto';
     }
 });
+
+
  
