@@ -92,11 +92,6 @@ header {
     min-height: 40vh;
     padding: 2rem 5%;
     margin-top: 80px;
-    position: relative;
-    background: linear-gradient(135deg, rgba(28, 31, 38, 0.2) 0%, rgba(32, 58, 76, 0.1) 100%);
-    backdrop-filter: blur(5px);
-    border-radius: 0 0 20px 20px;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
 .title-section .title {
@@ -117,17 +112,6 @@ header {
     justify-content: flex-end;
     padding: 2rem;
     position: relative;
-}
-
-.title-section .desktop-menu::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    height: 70%;
-    width: 1px;
-    background: linear-gradient(to bottom, transparent, #3af5f2, transparent);
 }
 
 .title-section .desktop-menu ul {
@@ -264,32 +248,299 @@ header {
     background: rgba(58, 245, 242, 0.1);
     border-color: rgba(58, 245, 242, 0.3);
 }
-
-/* Tooltip amélioré */
-.title-section .social-links a::after {
-    content: attr(data-label);
-    position: absolute;
-    bottom: -42px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(17, 17, 17, 0.9);
+.projects-section {
+    padding: 60px 30px;
+    font-family: "Special Gothic Expanded One", sans-serif;
     color: #fff;
-    padding: 6px 12px;
-    font-size: 0.8rem;
-    border-radius: 6px;
-    white-space: nowrap;
+  }
+  
+  .projects-section > div:first-child {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .projects-section h2 {
+    font-size: clamp(2rem, 5vw, 2rem);
+    color: #00ffff;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+  }
+  
+  /* Conteneur des cards (flex grid) */
+  .projects-section .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+  }.projects-section {
+    padding: 60px 30px;
+    font-family: "Special Gothic Expanded One", sans-serif;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .projects-section h2 {
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    color: #00ffff;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    margin-bottom: 40px;
+  }
+  
+  /* Conteneur des cards (flex grid) */
+  .projects-section .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+  }
+  
+  /* Card */
+  .card {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    height: 280px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    border: 1px solid #3af5f2;
+    box-shadow: 0 10px 30px #3af5f296;
+  }
+  
+  /* Image */
+  .card-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    opacity: 0.85;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .card:hover .card-image {
+    opacity: 0.25;
+  }
+  
+  /* Contenu */
+  .card > div {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
     opacity: 0;
-    pointer-events: none;
-    transition: all 0.3s ease;
-    backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.title-section .social-links a:hover::after {
+    transition: opacity 0.3s ease-in-out;
+    z-index: 2;
+  }
+  
+  .card:hover > div {
     opacity: 1;
-    bottom: -48px;
+  }
+  
+  /* Titre du projet */
+  .card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: white;
+  }
+  
+  /* Liste des technos */
+  .card ul {
+    display: flex;
+    list-style: none;
+    gap: 12px;
+    padding: 0;
+    margin: 0 0 15px 0;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .card ul li {
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Bouton */
+  .button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #00ffff;
+    color: #000;
+    padding: 10px 16px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #3af5f2;
+  }
+  
+  .symbols i {
+    transition: transform 0.3s ease;
+  }
+  
+  .button:hover .symbols i {
+    transform: translateX(5px);
+  }
+  
+  /* --------------------- */
+  /* 🔽 Responsive Layout  */
+  /* --------------------- */
+  @media screen and (max-width: 768px) {
+    .card {
+      height: 250px;
+    }
+  
+    .card h2 {
+      font-size: 1.4rem;
+    }
+  
+    .card ul li {
+      font-size: 0.85rem;
+    }
+  
+    .button {
+      font-size: 0.9rem;
+      padding: 8px 12px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .projects-section {
+      padding: 40px 20px;
+    }
+  
+    .card {
+      height: 220px;
+    }
+  
+    .card > div {
+      bottom: 15px;
+      left: 15px;
+      right: 15px;
+    }
+  
+    .card h2 {
+      font-size: 1.2rem;
+    }
+  
+    .card ul {
+      gap: 8px;
+    }
+  
+    .button {
+      padding: 6px 10px;
+      font-size: 0.85rem;
+    }
+  }
+  
+  
+  /* Card */
+  .card {
+    position: relative;
+    width: 500px;
+    height: 280px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    /* background-color: #1f1f1f; */
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    border: 1px solid #3af5f2;
+    box-shadow: 0 10px 30px #3af5f296;
+  }
+  
+  /* Image */
+  .card-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    opacity: 0.85;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .card:hover .card-image {
+    opacity: 0.25;
 }
 
+/* Contenu */
+.card > div {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 2;
+}
+
+.card:hover > div {
+    opacity: 1;
+  }
+  
+  /* Titre du projet */
+  .card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: white;
+  }
+    
+  /* Liste des technos */
+  .card ul {
+    display: flex;
+    list-style: none;
+    gap: 12px;
+    padding: 0;
+    margin: 0 0 15px 0;
+  }
+  
+  .card ul li {
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+  }
+  
+  /* Bouton */
+  .button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #00ffff;
+    color: #000;
+    padding: 10px 16px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #3af5f2;
+  }
+  
+  .symbols i {
+    transition: transform 0.3s ease;
+  }
+  
+  .button:hover .symbols i {
+    transform: translateX(5px);
+  }
 /* Animations */
 @keyframes fadeIn {
     from { 
