@@ -1,183 +1,103 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <!-- Meta Basics -->
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- SEO -->
-    <meta
-      name="description"
-      content="Portfolio de Franck-Olivier Leplat, développeur web full stack junior. Découvrez ses compétences, ses projets, et contactez-le pour vos besoins en développement web."
-    />
-    <meta
-      name="keywords"
-      content="portfolio, développeur web, full stack, Devenciel, Franck-Olivier Leplat, développement web"
-    />
-    <meta name="author" content="Franck-Olivier Leplat" />
-    <meta name="robots" content="index, follow" />
-
-    <!-- Preload & Preconnect -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preload" href="./css/style.css" as="style" />
-
-    <!-- Favicon -->
-    <link
-      rel="icon"
-      href="./images/other/Devenciel.ico"
-      type="image/x-icon"
-    />
-
-    <!-- Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="./css/style.css" />
-
-    <!-- Open Graph / Social Media -->
-    <meta property="og:title" content="Devenciel Portfolio" />
-    <meta
-      property="og:description"
-      content="Portfolio de Franck-Olivier Leplat, développeur web full stack junior."
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.devenciel.fr" />
-    <meta
-      property="og:image"
-      content="https://www.devenciel.fr/assets/images/profil/share-image.jpg"
-    />
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:creator" content="@Devenciel" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio de Franck-Olivier Leplat, développeur web full stack junior">
+    <link rel="icon" href="./images/other/Devenciel.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Devenciel Portfolio | Franck-Olivier Leplat</title>
-  </head>
-  <body>
+</head>
+<body>
     <header>
-      <div class="logo-container">
-        <img src="./images/other/Devenciel.webp" alt="Logo Devenciel" class="logo-img"/>
-        <span class="name-logo">Devenciel</span>
-      </div>
+        <div class="logo-container">
+            <img src="./images/other/Devenciel.webp" alt="Logo Devenciel" class="logo-img">
+            <span class="name-logo">Devenciel</span>
+        </div>
 
-      <div class="nav-title-container">
-        <h1>Franck-Olivier Leplat</h1>
-        <span>Développeur Web Junior – Full Stack</span>
-      </div>
+        <div class="nav-title-container">
+            <h1>Franck-Olivier Leplat</h1>
+            <span>Développeur Web Junior – Full Stack</span>
+        </div>
 
-      <div class="burger-menu">
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
+        <div class="burger-menu">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
 
-      <nav class="mobile-nav">
-        <ul>
-          <li><a href="#">A Propos</a></li>
-          <li><a href="#">Compétences</a></li>
-          <li><a href="#">Projets</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="#presentation">Présentation</a></li>
+                <li><a href="#competence">Compétences</a></li>
+                <li><a href="#projets">Projets</a></li>
+                <li><a href="#contact">Contactez-moi</a></li>
+            </ul>
+        </nav>
     </header>
 
     <section class="title-section">
-      <!-- <div class="title-content"> -->
         <div class="title">
-          <h1 class="name ">
-            <span class="sr-only">Franck-Olivier Leplat</span>
-            <ul>
-              <li>F</li>
-              <li>r</li>
-              <li>a</li>
-              <li>n</li>
-              <li>c</li>
-              <li>k</li>
-              <li>-</li>
-              <li>O</li>
-              <li>l</li>
-              <li>i</li>
-              <li>v</li>
-              <li>i</li>
-              <li>e</li>
-              <li>r</li>
-              <li>L</li>
-              <li>e</li>
-              <li>p</li>
-              <li>l</li>
-              <li>a</li>
-              <li>t</li>
-            </ul>
-          </h1>
-          <span class="subtitle">Développeur Web Junior – Full Stack</span>
-          <div class="social-links">
-            <a
-              href="https://www.facebook.com/DevenCiel59/"
-              target="_blank"
-              data-label="Facebook"
-              rel="noopener noreferrer"
-            >
-              <img
-                src="https://cdn-icons-png.flaticon.com/512/124/124010.png"
-                alt="Logo Facebook"
-                class="social-icon"
-              />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/franck-olivier-leplat-1b1a4815b/"
-              target="_blank"
-              data-label="LinkedIn"
-              rel="noopener noreferrer"
-            >
-              <img
-                src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
-                alt="Logo LinkedIn"
-                class="social-icon"
-              />
-            </a>
-            <a
-              href="https://github.com/Dev-en-ciel"
-              target="_blank"
-              data-label="GitHub"
-              rel="noopener noreferrer"
-            >
-              <img
-                src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
-                alt="Logo GitHub"
-                class="social-icon"
-              />
-            </a>
-          </div>
+            <h1 class="name">
+                <span class="sr-only">Franck-Olivier Leplat</span>
+                <ul>
+                    <li>F</li><li>r</li><li>a</li><li>n</li><li>c</li><li>k</li><li>-</li>
+                    <li>O</li><li>l</li><li>i</li><li>v</li><li>i</li><li>e</li><li>r</li>
+                    <li>L</li><li>e</li><li>p</li><li>l</li><li>a</li><li>t</li>
+                </ul>
+            </h1>
+            <span class="subtitle">Développeur Web Junior – Full Stack</span>
+            <div class="social-links">
+                <a href="https://www.facebook.com/DevenCiel59/" target="_blank" rel="noopener noreferrer">
+                    <img src="https://cdn-icons-png.flaticon.com/512/124/124010.png" alt="Facebook" class="social-icon">
+                </a>
+                <a href="https://www.linkedin.com/in/franck-olivier-leplat-1b1a4815b/" target="_blank" rel="noopener noreferrer">
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="social-icon">
+                </a>
+                <a href="https://github.com/Dev-en-ciel" target="_blank" rel="noopener noreferrer">
+                    <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" class="social-icon">
+                </a>
+            </div>
         </div>
 
         <nav class="desktop-menu">
-          <ul>
-            <li><a href="#presentation">Présentation</a></li>
-            <li><a href="#competence">Compétences</a></li>
-            <li><a href="#projets">Projets</a></li>
-            <li><a href="#contact">Contactez-moi</a></li>
-          </ul>
+            <ul>
+                <li><a href="#presentation">Présentation</a></li>
+                <li><a href="#competence">Compétences</a></li>
+                <li><a href="#projets">Projets</a></li>
+                <li><a href="#contact">Contactez-moi</a></li>
+            </ul>
         </nav>
-      <!-- </div> -->
     </section>
+
     <div class="limite-section" aria-hidden="true"></div>
 
-    <footer>
-      <div class="footer-link">
-        <p class="copyright">Dévenciel © 2025</p>
+    <footer class="portfolio-footer">
+      <div class="footer-container">
+          <div class="footer-social">
+              <a href="https://www.facebook.com/DevenCiel59/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                  <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/franck-olivier-leplat-1b1a4815b/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                  <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="https://github.com/Dev-en-ciel" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                  <i class="fab fa-github"></i>
+              </a>
+          </div>
+          <div class="footer-copyright">
+              <p>Dévenciel © <span class="current-year">2025</span></p>
+          </div>
       </div>
-    </footer>
+  </footer>
+    
     <button class="return-to-top" aria-label="Retour en haut">
-      <i class="fas fa-arrow-up"></i>
+        <i class="fas fa-arrow-up"></i>
     </button>
+    
     <script src="./js/index.js"></script>
-  </body>
+</body>
 </html>
