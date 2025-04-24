@@ -367,96 +367,31 @@ header {
     background-color: rgba(255, 255, 255, 0.1);
   }
   
-/* Bouton Retour en haut - Version sans animation de la flèche */
-.return-to-top {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #3af5f2 0%, #00ffff 100%);
-    color: #1c1f26;
-    border: none;
-    cursor: pointer;
-    display: flex;
+  /* Bouton */
+  .button {
+    display: inline-flex;
     align-items: center;
-    justify-content: center;
-    box-shadow: 0 5px 20px rgba(58, 245, 242, 0.4);
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(20px);
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    z-index: 1000;
-    outline: none;
-}
-
-.return-to-top.visible {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
-
-.return-to-top i {
-    font-size: 1.4rem;
-    /* Aucune animation appliquée à l'icône */
-}
-
-.return-to-top:hover {
-    transform: translateY(-5px) scale(1.1);
-    box-shadow: 0 8px 25px rgba(58, 245, 242, 0.6);
-}
-
-.return-to-top:active {
-    transform: scale(0.95);
-}
-
-/* Effet de pulsation */
-.return-to-top::after {
-    content: '';
-    position: absolute;
-    top: -10px;
-    left: -10px;
-    right: -10px;
-    bottom: -10px;
-    border: 2px solid rgba(58, 245, 242, 0.3);
-    border-radius: 50%;
-    animation: pulse 2s infinite;
-    opacity: 0;
-}
-
-.return-to-top.visible::after {
-    opacity: 1;
-}
-
-@keyframes pulse {
-    0% {
-        transform: scale(0.8);
-        opacity: 0.7;
-    }
-    70% {
-        transform: scale(1.3);
-        opacity: 0;
-    }
-    100% {
-        transform: scale(1.4);
-        opacity: 0;
-    }
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .return-to-top {
-        width: 45px;
-        height: 45px;
-        bottom: 20px;
-        right: 20px;
-    }
-    
-    .return-to-top i {
-        font-size: 1.2rem;
-    }
-}
+    gap: 10px;
+    background-color: #00ffff;
+    color: #000;
+    padding: 10px 16px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #3af5f2;
+  }
+  
+  .symbols i {
+    transition: transform 0.3s ease;
+  }
+  
+  .button:hover .symbols i {
+    transform: translateX(5px);
+  }
   
   /* --------------------- */
   /* 🔽 Responsive Layout  */
@@ -509,7 +444,9 @@ header {
     }
   }
   
+  
   /* Card */
+ /* Carte de projet - Version améliorée */
 .card {
     position: relative;
     width: 500px;
@@ -714,6 +651,14 @@ header {
     padding: 80px 5%;
     text-align: center;
 }
+.competences-section h2 {
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    color: #00ffff;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    margin-bottom: 40px;
+}
+
+
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -995,10 +940,10 @@ header {
   
   .contact-section .section-title {
     text-align: center;
-    font-size: clamp(2rem, 5vw, 2.2rem);
+    font-size: clamp(2rem, 5vw, 2.5rem);
     color: #00ffff;
     text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
-    margin-bottom: 30px;
+    margin-bottom: 40px;
   }
   
   .contact-container {
@@ -1071,30 +1016,83 @@ header {
     transform: translateY(-2px);
   }
   
-/* Bouton retour haut de page */
+/* Bouton Retour en haut - Version sans animation de la flèche */
 .return-to-top {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #3af5f2;
-    color: #1c1f26; /* Couleur de l’icône */
-    border: none;
-    border-radius: 50%;
+    bottom: 30px;
+    right: 30px;
     width: 50px;
     height: 50px;
-    font-size: 24px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #3af5f2 0%, #00ffff 100%);
+    color: #1c1f26;
+    border: none;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 0 10px #3af5f2;
-    z-index: 1000; /* s’assurer que le bouton est au-dessus des autres éléments */
-    transition: background-color 0.3s;
-  }
-  
-  .return-to-top:hover {
-    background-color: #0fd9d6;
-  }
+    box-shadow: 0 5px 20px rgba(58, 245, 242, 0.4);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 1000;
+    outline: none;
+}
+
+.return-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.return-to-top i {
+    font-size: 1.4rem;
+    /* Aucune animation appliquée à l'icône */
+}
+
+.return-to-top:hover {
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 8px 25px rgba(58, 245, 242, 0.6);
+}
+
+.return-to-top:active {
+    transform: scale(0.95);
+}
+
+/* Effet de pulsation */
+.return-to-top::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border: 2px solid rgba(58, 245, 242, 0.3);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+    opacity: 0;
+}
+
+.return-to-top.visible::after {
+    opacity: 1;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.8);
+        opacity: 0.7;
+    }
+    70% {
+        transform: scale(1.3);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1.4);
+        opacity: 0;
+    }
+}
+
 
  /* Footer Styles */
 .portfolio-footer {

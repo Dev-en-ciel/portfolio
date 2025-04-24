@@ -63,6 +63,7 @@ returnButton.addEventListener('click', (e) => {
     });
 });
 
+
 // Redimensionnement
 window.addEventListener('resize', () => {
     handleResponsiveLayout();
