@@ -60,7 +60,7 @@ header {
 }
 
 /* Conteneur titre mobile */
-.title-container {
+.nav-title-container {
     display: none;
     position: absolute;
     left: 50%;
@@ -69,7 +69,7 @@ header {
     text-align: center;
 }
 
-.title-container h1 {
+.nav-title-container h1 {
     font-size: 1.5rem;
     margin-bottom: 0.3rem;
     background: linear-gradient(90deg,
@@ -82,7 +82,7 @@ header {
     overflow: hidden;
 }
 
-.title-container span {
+.nav-title-container span {
     font-size: 1rem;
     color: #dee0e0;
     display: block;
@@ -90,14 +90,14 @@ header {
 }
 
 /* Section hero */
-.hero-section {
+.title-section {
     min-height: 100vh;
     display: flex;
     align-items: center;
     position: relative;
 }
 
-.hero-content {
+.title-content {
     max-width: 1200px;
     margin: 0 auto;
     width: 100%;
@@ -196,7 +196,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    height: 60vh;
+    height: 55vh;
     padding: 6rem 2rem 2rem;
     z-index: 1000;
     flex-direction: column;
@@ -273,11 +273,11 @@ header {
         height: 70px;
     }
 
-    .title-container {
+    .nav-title-container {
         width: 65%;
     }
 
-    .title-container h1 {
+    .nav-title-container h1 {
         font-size: 1.3rem;
     }
 
@@ -297,7 +297,7 @@ header {
         display: none;
     }
 
-    .title-container {
+    .nav-title-container {
         display: block;
     }
 
@@ -305,22 +305,22 @@ header {
         display: flex;
     }
 
-    .hero-section {
+    .title-section {
         padding: 6rem 1.5rem 3rem;
     }
 
-    .hero-content {
+    .title-content {
         justify-content: center;
         text-align: center;
     }
 }
 
 @media (max-width: 480px) {
-    .title-container h1 {
+    .nav-title-container h1 {
         font-size: 1rem;
     }
 
-    .title-container span {
+    .nav-title-container span {
         font-size: 0.8rem;
     }
 
