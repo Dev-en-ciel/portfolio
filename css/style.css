@@ -48,10 +48,7 @@ header {
 .name-logo {
     font-weight: 700;
     font-size: 1.8rem;
-    background: linear-gradient(130deg,
-            #3af5f2,
-            #a0e6e5 50%,
-            #3af5f2);
+    background: linear-gradient(130deg, #3af5f2, #a0e6e5 50%, #3af5f2);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -72,10 +69,7 @@ header {
 .nav-title-container h1 {
     font-size: 1.5rem;
     margin-bottom: 0.3rem;
-    background: linear-gradient(90deg,
-            transparent,
-            #3af5f2,
-            transparent);
+    background: linear-gradient(90deg, transparent, #3af5f2, transparent);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -89,84 +83,181 @@ header {
     font-weight: 500;
 }
 
-/* Section hero */
+/* Section title */
 .title-section {
-    min-height: 100vh;
     display: flex;
-    align-items: center;
-    position: relative;
-}
-
-.title-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    width: 100%;
-    display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    min-height: 30vh;
+    padding: 20px;
+    margin-top: 80px;
+    background-color: transparent;
 }
 
-.hero-title {
-    max-width: 600px;
-}
-
-.hero-title h1 {
-    font-size: 3rem;
-    color: #2c3e50;
-    margin-bottom: 1rem;
-    line-height: 1.2;
-}
-
-.hero-title span {
-    font-size: 1.5rem;
-    color: #7f8c8d;
-    display: block;
-    margin-bottom: 2rem;
-}
-
-/* Menus */
-.desktop-menu {
-    position: relative;
-}
-
-.desktop-menu ul {
-    list-style: none;
+.title-section .title {
+    flex: 2;
+    min-width: 300px;
     display: flex;
     flex-direction: column;
-    gap: 1.2rem;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
-.desktop-menu li {
-    text-align: left;
+.title-section .desktop-menu {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+    background-color: transparent;
 }
 
-.desktop-menu a {
-    text-decoration: none;
-    color: #2c3e50;
-    font-size: 1.2rem;
-    font-weight: 600;
-    padding: 0.5rem 1rem;
-    display: inline-block;
-    transition: all 0.3s ease;
+.title-section .desktop-menu ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    gap: 15px;
+}
+
+.title-section .desktop-menu li {
+    padding: 10px 0;
+    text-align: right;
+    width: 100%;
+    transition: transform 0.3s ease;
     position: relative;
 }
 
-.desktop-menu a::after {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    transition: width 0.3s ease;
+.title-section .desktop-menu a {
+    font-family: "Special Gothic Expanded One", sans-serif;
+    text-shadow: 1px 2px 3px #3af5f2;
+    font-size: clamp(1.5rem, 2vw, 2rem);
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+    padding: 5px 10px;
 }
 
-.desktop-menu a:hover {
-    color: #3498db;
+.title-section .desktop-menu li:hover {
+    z-index: 1;
 }
 
-.desktop-menu a:hover::after {
+.title-section .desktop-menu a:hover {
+    font-weight: bold;
+    color: #3af5f2;
+    transform: translate(-10px, -5px) scale(1.05);
+    text-shadow: 2px 3px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Animation des lettres du nom */
+.title-section .name {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    background-color: transparent;
+}
+
+.title-section .name ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.title-section .name li {
+    font-size: 2.5rem;
+    font-weight: bold;
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards;
+    background: linear-gradient(90deg, #ffffff, #00ffff, #ffffff);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    animation-name: fadeIn, shine;
+    animation-duration: 0.5s, 3s;
+    animation-iteration-count: 1, infinite;
+    animation-timing-function: ease, linear;
+}
+
+.title-section .subtitle {
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #e0f7fa;
+    margin-top: 15px;
+    letter-spacing: 1px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes shine {
+    0% { background-position: 0% center; }
+    100% { background-position: 200% center; }
+}
+
+/* Styles pour les réseaux sociaux */
+.title-section .social-links {
+    display: flex;
+    gap: 16px;
+    justify-content: start;
+    align-items: center;
+    margin-top: 20px;
     width: 100%;
+}
+
+.title-section .social-links a {
+    position: relative;
+    display: inline-block;
+}
+
+.title-section .social-icon {
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0.8;
+}
+
+.title-section .social-icon:hover {
+    transform: scale(1.1);
+    opacity: 1;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Tooltip pour les icônes sociales */
+.title-section .social-links a::after {
+    content: attr(data-label);
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #111;
+    color: #fff;
+    padding: 4px 10px;
+    font-size: 12px;
+    border-radius: 4px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, bottom 0.3s ease;
+}
+
+.title-section .social-links a:hover::after {
+    opacity: 1;
+    bottom: -45px;
 }
 
 /* Menu Burger */
@@ -256,18 +347,98 @@ header {
     transform: rotate(45deg) translate(-5px, -6px);
 }
 
+/* Bouton retour haut de page */
+.return-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #3af5f2;
+    color: #1c1f26; /* Couleur de l’icône */
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px #3af5f2;
+    z-index: 1000; /* s’assurer que le bouton est au-dessus des autres éléments */
+    transition: background-color 0.3s;
+  }
+  
+  .return-to-top:hover {
+    background-color: #0fd9d6;
+  }
+/* ############################################## */
+.limite-section {
+    width: 75%; 
+    height: 1px; 
+    margin: 40px auto; 
+    position: relative;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgb(58, 245, 242),
+        transparent
+    );
+    overflow: hidden;
+}
+.limite-section::before{
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: linear-gradient(
+    90deg,
+    #ffffff,
+    #3af5f2,
+    #f9fafa,
+    #3af5f2,
+    #ffffff,
+    #3af5f2,
+    #ffffff
+);
+opacity: 0.4;
+animation: cd-rotate 9s linear infinite;
+}
+/* ***** DEBUT ANNIV SEPARATION */
+@keyframes cd-rotate {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+    }
+/* ***** FIN ANNIV SEPARATION */
 /* Responsive */
 @media (max-width: 992px) {
-    .hero-title h1 {
-        font-size: 2.5rem;
+    .title-section {
+        flex-direction: column;
+        padding-top: 40px;
     }
-
-    .hero-title span {
-        font-size: 1.3rem;
+    
+    .title-section .title,
+    .title-section .desktop-menu {
+        width: 100%;
+        min-width: auto;
+    }
+    
+    .title-section .desktop-menu {
+        justify-content: center;
+        margin-top: 30px;
+    }
+    
+    .title-section .desktop-menu ul {
+        align-items: center;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
     header {
         padding: 1rem;
         height: 70px;
@@ -289,11 +460,8 @@ header {
         display: none;
     }
 
-    .desktop-menu {
-        display: none;
-    }
-
-    .hero-title {
+    .title-section .title,
+    .title-section .desktop-menu {
         display: none;
     }
 
@@ -308,11 +476,6 @@ header {
     .title-section {
         padding: 6rem 1.5rem 3rem;
     }
-
-    .title-content {
-        justify-content: center;
-        text-align: center;
-    }
 }
 
 @media (max-width: 480px) {
@@ -324,11 +487,11 @@ header {
         font-size: 0.8rem;
     }
 
-    .hero-title h1 {
-        font-size: 2rem;
+    .title-section .name li {
+        font-size: 1.8rem;
     }
-
-    .hero-title span {
+    
+    .title-section .subtitle {
         font-size: 1.1rem;
     }
 
