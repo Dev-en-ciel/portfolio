@@ -83,16 +83,20 @@ header {
     font-weight: 500;
 }
 
-/* Section title */
+/* Section title - Version améliorée */
 .title-section {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
-    min-height: 30vh;
-    padding: 20px;
+    align-items: flex-start;
+    min-height: 40vh;
+    padding: 2rem 5%;
     margin-top: 80px;
-    background-color: transparent;
+    position: relative;
+    background: linear-gradient(135deg, rgba(28, 31, 38, 0.2) 0%, rgba(32, 58, 76, 0.1) 100%);
+    backdrop-filter: blur(5px);
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
 .title-section .title {
@@ -101,8 +105,9 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    padding: 20px;
+    align-items: flex-start;
+    padding: 2rem;
+    z-index: 2;
 }
 
 .title-section .desktop-menu {
@@ -110,8 +115,19 @@ header {
     min-width: 300px;
     display: flex;
     justify-content: flex-end;
-    padding: 20px;
-    background-color: transparent;
+    padding: 2rem;
+    position: relative;
+}
+
+.title-section .desktop-menu::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 70%;
+    width: 1px;
+    background: linear-gradient(to bottom, transparent, #3af5f2, transparent);
 }
 
 .title-section .desktop-menu ul {
@@ -122,15 +138,13 @@ header {
     padding: 0;
     margin: 0;
     list-style: none;
-    gap: 15px;
+    gap: 1.5rem;
 }
 
 .title-section .desktop-menu li {
-    padding: 10px 0;
-    text-align: right;
+    padding: 0.5rem 0;
     width: 100%;
-    transition: transform 0.3s ease;
-    position: relative;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .title-section .desktop-menu a {
@@ -139,125 +153,188 @@ header {
     font-size: clamp(1.5rem, 2vw, 2rem);
     color: white;
     text-decoration: none;
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
     display: inline-block;
-    padding: 5px 10px;
+    padding: 0.5rem 1rem;
+    position: relative;
 }
 
-.title-section .desktop-menu li:hover {
-    z-index: 1;
+.title-section .desktop-menu a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #3af5f2;
+    transition: width 0.4s ease;
 }
 
 .title-section .desktop-menu a:hover {
-    font-weight: bold;
     color: #3af5f2;
-    transform: translate(-10px, -5px) scale(1.05);
-    text-shadow: 2px 3px 4px rgba(0, 0, 0, 0.8);
+    transform: translateX(-5px);
+    text-shadow: 0 0 10px rgba(58, 245, 242, 0.7);
 }
 
-/* Animation des lettres du nom */
+.title-section .desktop-menu a:hover::after {
+    width: 100%;
+}
+
+/* Animation des lettres du nom - Version améliorée */
 .title-section .name {
     display: flex;
-    justify-content: center;
-    margin-bottom: 10px;
-    background-color: transparent;
+    justify-content: flex-start;
+    margin-bottom: 1.5rem;
+    width: 100%;
 }
 
 .title-section .name ul {
     display: flex;
+    flex-wrap: wrap;
     list-style: none;
     padding: 0;
     margin: 0;
+    gap: 0.2rem;
 }
 
 .title-section .name li {
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 4vw, 2.8rem);
     font-weight: bold;
     opacity: 0;
-    animation: fadeIn 0.5s ease forwards;
-    background: linear-gradient(90deg, #ffffff, #00ffff, #ffffff);
+    animation: fadeIn 0.6s ease forwards, shine 4s infinite;
+    background: linear-gradient(90deg, #ffffff, #3af5f2, #ffffff);
     background-size: 200%;
-    background-clip: text;
     -webkit-background-clip: text;
+    background-clip: text;
     color: transparent;
-    -webkit-text-fill-color: transparent;
-    animation-name: fadeIn, shine;
-    animation-duration: 0.5s, 3s;
-    animation-iteration-count: 1, infinite;
-    animation-timing-function: ease, linear;
+    text-shadow: 0 0 8px rgba(58, 245, 242, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.title-section .name li:hover {
+    transform: translateY(-3px);
+    text-shadow: 0 0 15px rgba(58, 245, 242, 0.5);
 }
 
 .title-section .subtitle {
-    text-align: center;
-    font-size: 1.3rem;
-    font-weight: 600;
+    text-align: left;
+    font-size: clamp(1.1rem, 1.5vw, 1.5rem);
+    font-weight: 500;
     color: #e0f7fa;
-    margin-top: 15px;
-    letter-spacing: 1px;
+    margin-top: 1rem;
+    letter-spacing: 1.5px;
+    line-height: 1.6;
+    opacity: 0.9;
+    max-width: 80%;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-@keyframes shine {
-    0% { background-position: 0% center; }
-    100% { background-position: 200% center; }
-}
-
-/* Styles pour les réseaux sociaux */
+/* Styles améliorés pour les réseaux sociaux */
 .title-section .social-links {
     display: flex;
-    gap: 16px;
-    justify-content: start;
+    gap: 1.5rem;
+    justify-content: flex-start;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 2.5rem;
     width: 100%;
 }
 
 .title-section .social-links a {
     position: relative;
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .title-section .social-icon {
-    width: 40px;
-    height: 40px;
-    padding: 8px;
+    width: 44px;
+    height: 44px;
+    padding: 10px;
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    opacity: 0.8;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(58, 245, 242, 0.1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
 }
 
 .title-section .social-icon:hover {
-    transform: scale(1.1);
+    transform: translateY(-5px) scale(1.1);
     opacity: 1;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 20px rgba(58, 245, 242, 0.3);
+    background: rgba(58, 245, 242, 0.1);
+    border-color: rgba(58, 245, 242, 0.3);
 }
 
-/* Tooltip pour les icônes sociales */
+/* Tooltip amélioré */
 .title-section .social-links a::after {
     content: attr(data-label);
     position: absolute;
-    bottom: -35px;
+    bottom: -42px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #111;
+    background: rgba(17, 17, 17, 0.9);
     color: #fff;
-    padding: 4px 10px;
-    font-size: 12px;
-    border-radius: 4px;
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    border-radius: 6px;
     white-space: nowrap;
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.3s ease, bottom 0.3s ease;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .title-section .social-links a:hover::after {
     opacity: 1;
-    bottom: -45px;
+    bottom: -48px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { 
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes shine {
+    0% { 
+        background-position: -100% center;
+        text-shadow: 0 0 5px rgba(58, 245, 242, 0.3);
+    }
+    100% { 
+        background-position: 200% center;
+        text-shadow: 0 0 15px rgba(58, 245, 242, 0.6);
+    }
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .title-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .title-section .title,
+    .title-section .desktop-menu {
+        width: 100%;
+        align-items: center;
+    }
+    
+    .title-section .subtitle {
+        text-align: center;
+        max-width: 100%;
+    }
+    
+    .title-section .desktop-menu::before {
+        display: none;
+    }
 }
 
 /* Menu Burger */
