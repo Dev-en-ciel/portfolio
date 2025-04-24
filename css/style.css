@@ -398,7 +398,7 @@ header {
   .form-group textarea {
     width: 100%;
     padding: 12px;
-    background-color: #0b0c10;
+    background: linear-gradient(135deg, #1c1f26 0%, #203a4c 100%);
     border: 1px solid #3af5f2;
     border-radius: 6px;
     color: #3af5f2;
