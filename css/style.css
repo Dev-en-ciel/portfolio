@@ -91,7 +91,7 @@ header {
     align-items: flex-start;
     min-height: 40vh;
     padding: 2rem 5%;
-    margin-top: 80px;
+    margin-top: 30px;
 }
 
 .title-section .title {
@@ -100,7 +100,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     padding: 2rem;
     z-index: 2;
 }
@@ -109,7 +109,7 @@ header {
     flex: 1;
     min-width: 300px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     padding: 2rem;
     position: relative;
 }
@@ -167,7 +167,7 @@ header {
 /* Animation des lettres du nom - Version améliorée */
 .title-section .name {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     margin-bottom: 1.5rem;
     width: 100%;
 }
@@ -219,7 +219,7 @@ header {
     justify-content: flex-start;
     align-items: center;
     margin-top: 2.5rem;
-    width: 100%;
+    width: 55%;
 }
 
 .title-section .social-links a {
