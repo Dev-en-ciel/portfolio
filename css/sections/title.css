@@ -1,44 +1,153 @@
-/* Conteneur titre mobile */
+/* Menu Mobile (par défaut) */
 .nav-title-container {
-    display: none;
-    position: absolute;
+    display: block;
+    position: fixed;
+    top: 20px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1001;
     text-align: center;
 }
 
-/* menu contenant*/
 .title-section {
-    /* background-color: blanchedalmond; */
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    /* align-items: flex-start; */
-    min-height: 40vh;
-    margin-top: 0;
+    min-height: 100vh;
+    /* padding-top: 80px; */
+    position: relative;
 }
 
-/* menu desktop */
-.title-section .desktop-menu {
-    /* background-color: brown; */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+/* Menu Burger (mobile) */
+.mobile-menu-btn {
+    display: block;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1010;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.desktop-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    /* min-width: 300px;*/
-
+    height: 80vh;
+    background: rgba(0, 0, 0, 0.779);
+    z-index: 1000;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
-/* ul menu desktop */
-.title-section .desktop-menu ul {
+.desktop-menu.active {
+    opacity: 1;
     display: flex;
-    justify-content: center;
+}
+
+.desktop-menu ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
     margin: 0;
     list-style: none;
+    width: 100%;
 }
 
+.desktop-menu li {
+    padding: 1.5rem 0;
+    width: 100%;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.desktop-menu a {
+    font-family: "Special Gothic Expanded One", sans-serif;
+    text-shadow: 1px 2px 3px #3af5f2;
+    font-size: 1.8rem;
+    color: white;
+    text-decoration: none;
+    transition: all 0.6s ease;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    position: relative;
+    width: 100%;
+}
+
+.desktop-menu a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: #3af5f2;
+    transition: width 0.4s ease;
+}
+
+.desktop-menu a:hover {
+    color: #3af5f2;
+    text-shadow: 0 5px 10px rgb(23, 24, 24);
+}
+
+.desktop-menu a:hover::after {
+    width: 80%;
+}
+
+/* Contenu principal */
+.title {
+    text-align: center;
+    padding: 2rem;
+    z-index: 1;
+}
+
+/* Version Desktop */
+@media (min-width: 992px) {
+    .mobile-menu-btn {
+        display: none;
+    }
+    
+    .desktop-menu {
+        display: flex;
+        position: static;
+        height: auto;
+        max-height: none;
+        background: transparent;
+        opacity: 1;
+        border-radius: 0;
+        justify-content: flex-start;
+    }
+    
+    .desktop-menu ul {
+        flex-direction: row;
+        gap: 1.5rem;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .desktop-menu li {
+        width: auto;
+        padding: 0;
+    }
+    
+    .desktop-menu a {
+        font-size: 1.2rem;
+        padding: 0.3rem 0.8rem;
+    }
+    
+    .title-section {
+        padding: 1rem 0;
+    }
+}
 /* titre h1 */
 /* .nav-title-container h1 {
     font-size: 1.5rem;
@@ -74,55 +183,6 @@
     z-index: 2; */
 }
 
-/* li menu desktop */
-.title-section .desktop-menu li {
-    padding: 0.5rem 0;
-    width: 100%;
-    /* transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); */
-}
-
-/* lien a menu desktop */
-.title-section .desktop-menu a {
-    /* background-color: rgb(251, 152, 3); */
-    font-family: "Special Gothic Expanded One", sans-serif;
-    text-shadow: 1px 2px 3px #3af5f2;
-    font-size: 1.5rem;
-    width: 100%;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    transition: all 0.6s ease;
-    display: inline-block;
-    /* padding: 0.5rem 1rem; */
-    position: relative;
-}
-
-/* lien a menu border bottom */
-.title-section .desktop-menu a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: #3af5f2;
-    transition: width 0.4s ease;
-}
-
-/* lien a menu ombre et couleur text */
-.title-section .desktop-menu a:hover {
-    color: #3af5f2;
-    text-shadow: 0 5px 10px rgb(23, 24, 24);
-}
-
-/* lien a menu desktop */
-.title-section .desktop-menu a:hover::after {
-    position: absolute;
-    height: 2px;
-    left: 10%;
-    bottom: 1%;
-    width: 80%;
-}
 
 /* Animation des lettres du nom */
 /* .title-section .name {

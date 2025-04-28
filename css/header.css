@@ -3,12 +3,12 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    width: 90%;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     height: 80px;
     position: relative;
+    left: 5%;
 }
-
 .logo-container {
     display: flex;
     align-items: center;
