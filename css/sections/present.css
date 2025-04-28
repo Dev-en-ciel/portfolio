@@ -17,8 +17,8 @@
 .presentation-content {
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
   gap: 60px;
   padding: 20px;
 }
