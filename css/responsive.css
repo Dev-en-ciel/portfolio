@@ -1,146 +1,17 @@
-  /* --------------------- */
-  /* 🔽 Responsive Layout  */
-  /* --------------------- */
-  @media screen and (max-width: 768px) {
-    .card {
-      height: 250px;
-    }
-  
-    .card h2 {
-      font-size: 1.4rem;
-    }
-  
-    .card ul li {
-      font-size: 0.85rem;
-    }
-  
-    .button {
-      font-size: 0.9rem;
-      padding: 8px 12px;
-    }
-  }
-  
-  @media screen and (max-width: 480px) {
-    .projects-section {
-      padding: 40px 20px;
-    }
-  
-    .card {
-      height: 220px;
-    }
-  
-    .card > div {
-      bottom: 15px;
-      left: 15px;
-      right: 15px;
-    }
-  
-    .card h2 {
-      font-size: 1.2rem;
-    }
-  
-    .card ul {
-      gap: 8px;
-    }
-  
-    .button {
-      padding: 6px 10px;
-      font-size: 0.85rem;
-    }
-  }
-  @media (max-width: 768px) {
-    .skills-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-    }
-    
-    .skill-category {
-        padding: 20px;
-    }
-    
-    .skill-icons {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-    }
-}
-
-@media (max-width: 480px) {
-    .skills-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .skill-icons {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-/* Responsive */
 @media (max-width: 992px) {
-    .title-section {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-    
+
     .title-section .title,
     .title-section .desktop-menu {
-        width: 100%;
-        align-items: center;
+        font-size: 1rem;
     }
-    
+
     .title-section .subtitle {
         text-align: center;
-        max-width: 100%;
+        max-width: 60%;
     }
-    
+
     .title-section .desktop-menu::before {
         display: none;
-    }
-}
-@media (max-width: 768px) {
-    .portfolio-footer {
-        padding: 1.2rem 0;
-    }
-    
-    .footer-social {
-        gap: 1rem;
-    }
-    
-    .footer-social a {
-        font-size: 1.3rem;
-        width: 40px;
-        height: 40px;
-    }
-}
-  
-  @media (max-width: 768px) {
-    .footer-social {
-      display: flex;
-      justify-content: center;
-    }
-    
-    .main-social {
-      display: none;
-    }
-  }
-  @media (max-width: 992px) {
-    .title-section {
-        flex-direction: column;
-        padding-top: 40px;
-    }
-    
-    .title-section .title,
-    .title-section .desktop-menu {
-        width: 100%;
-        min-width: auto;
-    }
-    
-    .title-section .desktop-menu {
-        justify-content: center;
-        margin-top: 30px;
-    }
-    
-    .title-section .desktop-menu ul {
-        align-items: center;
     }
 }
 
@@ -182,8 +53,46 @@
     .title-section {
         padding: 6rem 1.5rem 3rem;
     }
+
     .social-links {
-        display: block; 
+        display: block;
+    }
+
+    .card {
+        height: 250px;
+    }
+
+    .card h2 {
+        font-size: 1.4rem;
+    }
+
+    .card ul li {
+        font-size: 0.85rem;
+    }
+
+    .button {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+
+    .portfolio-footer {
+        padding: 1.2rem 0;
+    }
+
+    .footer-social {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .main-social {
+        display: none;
+    }
+
+    .footer-social a {
+        font-size: 1.3rem;
+        width: 40px;
+        height: 40px;
     }
 }
 
@@ -199,12 +108,61 @@
     .title-section .name li {
         font-size: 1.8rem;
     }
-    
+
     .title-section .subtitle {
         font-size: 1.1rem;
     }
 
     .mobile-nav a {
         font-size: 1rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skill-icons {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .skill-category {
+        padding: 20px;
+    }
+
+    .skill-icons {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .projects-section {
+        padding: 40px 20px;
+    }
+
+    .card {
+        height: 220px;
+    }
+
+    .card>div {
+        bottom: 15px;
+        left: 15px;
+        right: 15px;
+    }
+
+    .card h2 {
+        font-size: 1.2rem;
+    }
+
+    .card ul {
+        gap: 8px;
+    }
+
+    .button {
+        padding: 6px 10px;
+        font-size: 0.85rem;
     }
 }
