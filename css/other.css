@@ -1,0 +1,33 @@
+.limite-section {
+    width: 75%; 
+    height: 1px; 
+    margin: 40px auto; 
+    position: relative;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgb(58, 245, 242),
+        transparent
+    );
+    overflow: hidden;
+}
+.limite-section::before{
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: linear-gradient(
+    90deg,
+    #ffffff,
+    #3af5f2,
+    #f9fafa,
+    #3af5f2,
+    #ffffff,
+    #3af5f2,
+    #ffffff
+);
+opacity: 0.4;
+animation: cd-rotate 9s linear infinite;
+}

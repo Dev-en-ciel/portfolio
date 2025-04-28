@@ -1,0 +1,273 @@
+/* SECTION Projets */
+.projects-section {
+    padding: 60px 30px;
+    font-family: "Special Gothic Expanded One", sans-serif;
+    color: #fff;
+}
+
+.projects-section > div:first-child {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.projects-section h2 {
+    font-size: clamp(2rem, 5vw, 2rem);
+    color: #00ffff;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+  
+  /* Conteneur des cards (flex grid) */
+  .projects-section .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+  }
+  .projects-section {
+    padding: 60px 30px;
+    font-family: "Special Gothic Expanded One", sans-serif;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .projects-section h2 {
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    color: #00ffff;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    margin-bottom: 40px;
+  }
+  
+  /* Conteneur des cards (flex grid) */
+  .projects-section .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+  }
+  
+  /* Card */
+  .card {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    height: 280px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    border: 1px solid #3af5f2;
+    box-shadow: 0 10px 30px #3af5f296;
+  }
+  
+  /* Image */
+  .card-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    opacity: 0.85;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .card:hover .card-image {
+    opacity: 0.25;
+  }
+  
+  /* Contenu */
+  .card > div {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 2;
+  }
+  
+  .card:hover > div {
+    opacity: 1;
+  }
+  
+  /* Titre du projet */
+  .card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: white;
+  }
+  
+  /* Liste des technos */
+  .card ul {
+    display: flex;
+    list-style: none;
+    gap: 12px;
+    padding: 0;
+    margin: 0 0 15px 0;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .card ul li {
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  
+
+  /* Card */
+.card {
+    position: relative;
+    width: 500px;
+    height: 280px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background: linear-gradient(135deg, rgba(31, 31, 31, 0.8) 0%, rgba(28, 31, 38, 0.9) 100%);
+    border: 1px solid rgba(58, 245, 242, 0.1);
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.02);
+    border: 1px solid #3af5f2;
+    box-shadow: 0 20px 40px rgba(58, 245, 242, 0.3);
+}
+
+/* Image */
+.card-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    opacity: 0.9;
+    transition: all 0.6s ease;
+    filter: brightness(0.8) contrast(1.1);
+    transform: translateZ(30px);
+}
+
+.card:hover .card-image {
+    opacity: 0.2;
+    filter: brightness(0.6) blur(1px);
+    transform: scale(1.1) translateZ(20px);
+}
+
+/* Contenu */
+.card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 25px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease 0.1s;
+    z-index: 3;
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, transparent 100%);
+    backdrop-filter: blur(5px);
+}
+
+.card:hover .card-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Titre du projet */
+.card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: white;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    position: relative;
+    display: inline-block;
+}
+
+.card h2::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #3af5f2;
+    transition: width 0.4s ease 0.2s;
+}
+
+.card:hover h2::after {
+    width: 100%;
+}
+/* Bouton des cartes projet*/
+.project-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: linear-gradient(135deg, #3af5f2 0%, #00ffff 100%);
+    color: #1c1f26;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(58, 245, 242, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.project-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: 0.5s;
+}
+
+.project-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(58, 245, 242, 0.5);
+}
+
+.project-button:hover::before {
+    left: 100%;
+}
+
+.button-icon {
+    transition: transform 0.4s ease;
+}
+
+.project-button:hover .button-icon {
+    transform: translateX(5px) rotate(360deg);
+}
+
+/* Effet de lumière au survol */
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at var(--x) var(--y), 
+                rgba(58, 245, 242, 0.1) 0%, 
+                transparent 70%);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 2;
+}
+
+.card:hover::before {
+    opacity: 1;
+}

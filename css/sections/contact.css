@@ -1,0 +1,84 @@
+.contact-section {
+    padding: 60px 30px;
+    font-family: "Special Gothic Expanded One", sans-serif;
+    color: #fff;
+  }
+  
+  .contact-section .section-title {
+    text-align: center;
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    color: #00ffff;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    margin-bottom: 40px;
+  }
+  
+  .contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: rgba(28, 31, 38, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  }
+  
+  .contact-container p {
+    text-align: center;
+    color: #ccc;
+    margin-bottom: 25px;
+    font-size: 1rem;
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 6px;
+    color: #0fd9d6;
+    font-weight: bold;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #1c1f26 0%, #203a4c 100%);
+    border: 1px solid #3af5f2;
+    border-radius: 6px;
+    color: #3af5f2;
+    font-size: 1rem;
+    resize: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border-color: #00ffff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 255, 255, 0.4);
+  }
+  
+  .submit-button {
+    align-self: flex-start;
+    background-color: #00ffff;
+    color: #000;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .submit-button:hover {
+    background-color: #3af5f2;
+    transform: translateY(-2px);
+  }
+  
