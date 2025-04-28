@@ -1,4 +1,4 @@
-/* Animation d'entrée */
+/* Anim skills */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -40,7 +40,7 @@
     }
 }
 
-/* Animations */
+/* Animations lettres du nom */
 @keyframes fadeIn {
     from {
         opacity: 0;
