@@ -16,27 +16,6 @@
 }
 
 @media (max-width: 768px) {
-    /* header {
-        padding: 1rem;
-        height: 70px;
-    }
-
-    .nav-title-container {
-        width: 65%;
-    }
-
-    .nav-title-container h1 {
-        font-size: 1.1rem;
-    }
-
-    .logo-img {
-        height: 40px;
-    }
-
-    .name-logo {
-        display: none;
-    }
-
     .title-section .title,
     .title-section .desktop-menu {
         display: none;
@@ -45,6 +24,7 @@
     .nav-title-container {
         display: block;
     }
+
 
     .title-section {
         padding: 6rem 1.5rem 3rem;
@@ -89,11 +69,11 @@
         font-size: 1.3rem;
         width: 40px;
         height: 40px;
-    } */
+    }
 }
 
 @media (max-width: 480px) {
-    /* .nav-title-container h1 {
+    .nav-title-container h1 {
         font-size: 1rem;
     }
 
@@ -160,5 +140,5 @@
     .button {
         padding: 6px 10px;
         font-size: 0.85rem;
-    } */
+    }
 }

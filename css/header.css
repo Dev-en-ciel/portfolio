@@ -4,25 +4,24 @@ header {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    top: 0;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     height: 80px;
+    position: relative;
 }
 
 .logo-container {
     display: flex;
     align-items: center;
     gap: 12px;
+    height: 100%; 
 }
 
 .logo-img {
     height: 50px;
     width: auto;
     transition: transform 0.3s ease;
-}
-
-.logo-container:hover .logo-img {
-    transform: scale(1.30);
+    object-fit: contain;
+    align-self: center; 
 }
 
 .name-logo {
@@ -32,49 +31,77 @@ header {
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    overflow: hidden;
-    transition: all 0.3s ease;
+    line-height: 1;
+    display: flex;
+    align-items: center; 
+    height: 100%; 
 }
 
-/* Icon reseaux sociaux */
+/* Conteneur icônes */
 .social-links {
     display: flex;
     gap: 1.2rem;
-    justify-content: flex-end;
     align-items: center;
-    width: 55%;
+    height: 100%;
 }
+
+/* Alignement des icônes */
 .social-links a {
-    color: #ffffff;
-    font-size: 1.5rem;
-    transition: all 0.3s ease;
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 45px;
+    height: 45px;
+    position: relative;
+    top: 0; 
 }
-.social-links a:hover {
-    color: #3af5f2;
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
+
 .social-icon {
-    width: 44px;
-    height: 44px;
+    width: 100%;
+    height: 100%;
     padding: 10px;
     border-radius: 50%;
     backdrop-filter: blur(5px);
     border: 1px solid rgba(58, 245, 242, 0.1);
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.social-icon:hover {
-    transform: translateY(-5px) scale(1.1);
-    opacity: 1;
-    box-shadow: 0 8px 20px rgba(58, 245, 242, 0.3);
-    background: rgba(58, 245, 242, 0.1);
-    border-color: rgba(58, 245, 242, 0.3);
-} 
 
+/* Version Responsive */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+        gap: 1rem;
+    }
+    
+    .logo-container, 
+    .social-links {
+        height: auto;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .social-links {
+        margin-top: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-img {
+        height: 40px;
+    }
+    
+    .name-logo {
+        font-size: 1.5rem;
+    }
+    
+    .social-links a {
+        width: 40px;
+        height: 40px;
+    }
+}
