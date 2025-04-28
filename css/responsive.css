@@ -16,7 +16,7 @@
 }
 
 @media (max-width: 768px) {
-    header {
+    /* header {
         padding: 1rem;
         height: 70px;
     }
@@ -44,10 +44,6 @@
 
     .nav-title-container {
         display: block;
-    }
-
-    .burger-menu {
-        display: flex;
     }
 
     .title-section {
@@ -93,11 +89,11 @@
         font-size: 1.3rem;
         width: 40px;
         height: 40px;
-    }
+    } */
 }
 
 @media (max-width: 480px) {
-    .nav-title-container h1 {
+    /* .nav-title-container h1 {
         font-size: 1rem;
     }
 
@@ -164,5 +160,5 @@
     .button {
         padding: 6px 10px;
         font-size: 0.85rem;
-    }
+    } */
 }
