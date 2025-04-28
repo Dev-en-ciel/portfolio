@@ -7,8 +7,40 @@
     z-index: 1001;
     text-align: center;
 }
+
+/* menu contenant*/
+.title-section {
+    /* background-color: blanchedalmond; */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* align-items: flex-start; */
+    min-height: 40vh;
+    margin-top: 0;
+}
+
+/* menu desktop */
+.title-section .desktop-menu {
+    /* background-color: brown; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    /* min-width: 300px;*/
+
+}
+
+/* ul menu desktop */
+.title-section .desktop-menu ul {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    list-style: none;
+}
+
 /* titre h1 */
-.nav-title-container h1 {
+/* .nav-title-container h1 {
     font-size: 1.5rem;
     margin-bottom: 0.3rem;
     background: linear-gradient(90deg, transparent, #3af5f2, transparent);
@@ -16,28 +48,22 @@
     background-clip: text;
     color: transparent;
     overflow: hidden;
-}
-/* Sous-titre */
-.nav-title-container span {
-    font-size: 1rem;
-    color: #dee0e0;
-    display: block;
-    font-weight: 500;
-}
+    } */
 
-/* menu contenant*/
-.title-section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
-    min-height: 40vh;
-    padding: 2rem 5%;
-    margin-top: 20px;
-}
+/* Sous-titre */
+/* .nav-title-container span {
+        background-color: chartreuse;
+        font-size: 1rem;
+        color: #dee0e0;
+        display: block;
+        font-weight: 500;
+        } */
+
+
 /* titre contenant desktop */
 .title-section .title {
-    flex: 2;
+    /* background-color: blueviolet; */
+    /* flex: 2;
     min-width: 300px;
     display: flex;
     flex-direction: column;
@@ -45,47 +71,33 @@
     align-items: center;
     margin-top: 100px;
     padding: 2rem;
-    z-index: 2;
+    z-index: 2; */
 }
-/* menu desktop */
-.title-section .desktop-menu {
-    flex: 1;
-    min-width: 300px;
-    display: flex;
-    justify-content: flex-start;
-    padding: 2rem;
-    position: relative;
-}
-/* ul menu desktop */
-.title-section .desktop-menu ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    gap: 1.5rem;
-}
+
 /* li menu desktop */
 .title-section .desktop-menu li {
     padding: 0.5rem 0;
     width: 100%;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    /* transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); */
 }
+
 /* lien a menu desktop */
 .title-section .desktop-menu a {
+    /* background-color: rgb(251, 152, 3); */
     font-family: "Special Gothic Expanded One", sans-serif;
     text-shadow: 1px 2px 3px #3af5f2;
-    font-size: clamp(1.5rem, 2vw, 2rem);
+    font-size: 1.5rem;
+    width: 100%;
     color: white;
+    text-align: center;
     text-decoration: none;
-    transition: all 0.4s ease;
+    transition: all 0.6s ease;
     display: inline-block;
-    padding: 0.5rem 1rem;
+    /* padding: 0.5rem 1rem; */
     position: relative;
 }
-/* lien a menu desktop */
+
+/* lien a menu border bottom */
 .title-section .desktop-menu a::after {
     content: '';
     position: absolute;
@@ -96,35 +108,42 @@
     background: #3af5f2;
     transition: width 0.4s ease;
 }
-/* lien a menu desktop */
+
+/* lien a menu ombre et couleur text */
 .title-section .desktop-menu a:hover {
     color: #3af5f2;
-    transform: translateX(-5px);
-    text-shadow: 0 0 10px rgba(58, 245, 242, 0.7);
+    text-shadow: 0 5px 10px rgb(23, 24, 24);
 }
+
 /* lien a menu desktop */
 .title-section .desktop-menu a:hover::after {
-    width: 100%;
+    position: absolute;
+    height: 2px;
+    left: 10%;
+    bottom: 1%;
+    width: 80%;
 }
 
 /* Animation des lettres du nom */
-.title-section .name {
+/* .title-section .name {
     display: flex;
     justify-content: center;
     margin-bottom: 1.5rem;
     width: 100%;
-}
+} */
+
 /* ul lettres du nom */
-.title-section .name ul {
+/* .title-section .name ul {
     display: flex;
     flex-wrap: wrap;
     list-style: none;
     padding: 0;
     margin: 0;
     gap: 0.2rem;
-}
+} */
+
 /* li lettre du nom */
-.title-section .name li {
+/* .title-section .name li {
     font-size: clamp(2rem, 4vw, 2.8rem);
     font-weight: bold;
     opacity: 0;
@@ -136,14 +155,16 @@
     color: transparent;
     text-shadow: 0 0 8px rgba(58, 245, 242, 0.3);
     transition: transform 0.3s ease;
-}
+} */
+
 /*  li lettre du nom hover */
-.title-section .name li:hover {
+/* .title-section .name li:hover {
     transform: translateY(-3px);
     text-shadow: 0 0 15px rgba(58, 245, 242, 0.5);
-}
+} */
+
 /* sous-titre  */
-.title-section .subtitle {
+/* .title-section .subtitle {
     text-align: left;
     font-size: clamp(1.1rem, 1.5vw, 1.5rem);
     font-weight: 500;
@@ -153,41 +174,4 @@
     line-height: 1.6;
     opacity: 0.9;
     max-width: 80%;
-}
-
-/* réseaux sociaux */
-/* .title-section .social-links {
-    display: flex;
-    gap: 1.5rem;
-    justify-content: flex-start;
-    align-items: center;
-    margin-top: 2.5rem;
-    width: 55%;
-}
-
-.title-section .social-links a {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-} */
-
-/* .title-section .social-icon {
-    width: 44px;
-    height: 44px;
-    padding: 10px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(5px);
-    border: 1px solid rgba(58, 245, 242, 0.1);
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
-} */
-
-/* .title-section .social-icon:hover {
-    transform: translateY(-5px) scale(1.1);
-    opacity: 1;
-    box-shadow: 0 8px 20px rgba(58, 245, 242, 0.3);
-    background: rgba(58, 245, 242, 0.1);
-    border-color: rgba(58, 245, 242, 0.3);
 } */

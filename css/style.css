@@ -14,32 +14,5 @@
 @import url('./anim.css');
 
 
-/* Liste des technos */
-/* .tech-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    padding: 0;
-    margin: 0 0 20px 0;
-    list-style: none;
-}
-
-.tech-list li {
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    background: rgba(58, 245, 242, 0.15);
-    color: #e0f7fa;
-    border: 1px solid rgba(58, 245, 242, 0.3);
-    backdrop-filter: blur(5px);
-    transition: all 0.3s ease;
-}
-
-.card:hover .tech-list li {
-    background: rgba(58, 245, 242, 0.25);
-    transform: translateY(-3px);
-} */
-
-
 
 

@@ -1,4 +1,4 @@
-@media (max-width: 992px) {
+/* @media (max-width: 992px) {
 
     .title-section .title,
     .title-section .desktop-menu {
@@ -13,27 +13,10 @@
     .title-section .desktop-menu::before {
         display: none;
     }
-}
+} */
 
 @media (max-width: 768px) {
-    .title-section .title,
-    .title-section .desktop-menu {
-        display: none;
-    }
-
-    .nav-title-container {
-        display: block;
-    }
-
-
-    .title-section {
-        padding: 6rem 1.5rem 3rem;
-    }
-
-    .social-links {
-        display: block;
-    }
-
+    
     .card {
         height: 250px;
     }
@@ -73,7 +56,7 @@
 }
 
 @media (max-width: 480px) {
-    .nav-title-container h1 {
+    /* .nav-title-container h1 {
         font-size: 1rem;
     }
 
@@ -91,7 +74,7 @@
 
     .mobile-nav a {
         font-size: 1rem;
-    }
+    } */
 
     .skills-grid {
         grid-template-columns: 1fr;
