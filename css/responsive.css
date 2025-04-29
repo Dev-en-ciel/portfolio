@@ -1,77 +1,73 @@
-/* menu burger */
-@media (min-width: 992px) {
+/* ========== VERSION MOBILE ========== */
+@media (max-width: 991px) {
     .mobile-menu-btn {
-        display: none;
+        /* display: none; Afficher le burger */
     }
     
     .desktop-menu {
-        display: flex;
-        position: static;
-        height: auto;
-        max-height: none;
-        background: transparent;
-        opacity: 1;
-        border-radius: 0;
-        justify-content: flex-start;
+        /* display: none; Cacher le menu desktop */
+        /* position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.9);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; */
+    }
+    
+    .desktop-menu.active {
+        /* display: flex; Afficher quand actif */
     }
     
     .desktop-menu ul {
-        flex-direction: row;
-        gap: 1.5rem;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-    
-    .desktop-menu li {
-        width: auto;
-        padding: 0;
+        /* flex-direction: column;
+        gap: 2rem; */
     }
     
     .desktop-menu a {
-        font-size: 1.2rem;
-        padding: 0.3rem 0.8rem;
-    }
-    
-    .title-section {
-        padding: 1rem 0;
+        /* font-size: 1.8rem; */
     }
 }
 
+/* Version Mobile - en dessous de 768px */
 @media (max-width: 768px) {
-    .desktop-menu ul {
-        font-size: 0.3rem;
+    .title-section {
+        min-height: 50vh;
     }
+    
     .card {
         height: 250px;
     }
-
+    
     .card h2 {
         font-size: 1.4rem;
     }
-
+    
     .card ul li {
         font-size: 0.85rem;
     }
-
+    
     .button {
         font-size: 0.9rem;
         padding: 8px 12px;
     }
-
+    
     .portfolio-footer {
         padding: 1.2rem 0;
     }
-
+    
     .footer-social {
         display: flex;
         justify-content: center;
         gap: 1rem;
     }
-
+    
     .main-social {
         display: none;
     }
-
+    
     .footer-social a {
         font-size: 1.3rem;
         width: 40px;
@@ -80,7 +76,7 @@
 }
 
 @media (max-width: 480px) {
-    /* .nav-title-container h1 {
+    .nav-title-container h1 {
         font-size: 1rem;
     }
 
@@ -98,7 +94,7 @@
 
     .mobile-nav a {
         font-size: 1rem;
-    } */
+    }
 
     .skills-grid {
         grid-template-columns: 1fr;
