@@ -308,11 +308,12 @@
     </section>
 
     <div class="limite-section" aria-hidden="true"></div>
+    <div id="notification-container"></div>
     <section class="contact-section" id="contact">
       <h2 class="section-title">Contact</h2>
       <div class="contact-container">
         <p>Une question, une idée, un projet ? Écrivez-moi !</p>
-        <form class="contact-form">
+        <form class="contact-form" id="contact-form">
           <div class="form-group">
             <label for="nom">Nom :</label>
             <input
@@ -388,7 +389,7 @@
     <button class="return-to-top" aria-label="Retour en haut">
       <i class="fas fa-arrow-up"></i>
     </button>
-
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="./js/index.js"></script>
   </body>
 </html>
