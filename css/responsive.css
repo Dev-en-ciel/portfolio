@@ -4,45 +4,17 @@
         width: 80%;
         margin-left: 10px;
     }
-    .title-section .name ul li{
+
+    .title-section .name ul li {
         font-size: 1.8rem;
     }
-    .title-section .name ul li:nth-child(15) {
-        margin-left: 3%;
-    }
-    .subtitle{
+
+
+    .subtitle {
         width: 80%;
         font-size: 1.2rem;
     }
-    .mobile-menu-btn {
-        /* display: none; Afficher le burger */
-    }
-    
-    .desktop-menu {
-        /* display: none; Cacher le menu desktop */
-        /* position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        background: rgba(0, 0, 0, 0.9);
-        flex-direction: column;
-        justify-content: center;
-        align-items: center; */
-    }
-    
-    .desktop-menu.active {
-        /* display: flex; Afficher quand actif */
-    }
-    
-    .desktop-menu ul {
-        /* flex-direction: column;
-        gap: 2rem; */
-    }
-    
-    .desktop-menu a {
-        /* font-size: 1.8rem; */
-    }
+
 }
 
 /* Version Mobile - en dessous de 768px */
@@ -50,42 +22,42 @@
     .title-section {
         min-height: 45vh;
     }
+
     .title-section .name ul {
         width: 80%;
         margin: 0 10% 0 10%
-    };
-    
+    }
     .card {
         height: 250px;
     }
-    
+
     .card h2 {
         font-size: 1.4rem;
     }
-    
+
     .card ul li {
         font-size: 0.85rem;
     }
-    
+
     .button {
         font-size: 0.9rem;
         padding: 8px 12px;
     }
-    
+
     .portfolio-footer {
         padding: 1.2rem 0;
     }
-    
+
     .footer-social {
         display: flex;
         justify-content: center;
         gap: 1rem;
     }
-    
+
     .main-social {
         display: none;
     }
-    
+
     .footer-social a {
         font-size: 1.3rem;
         width: 40px;
@@ -97,6 +69,7 @@
     .sr-only {
         font-size: 1rem;
     }
+
     .nav-title-container h1 {
         font-size: 1rem;
     }

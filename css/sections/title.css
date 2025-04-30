@@ -75,7 +75,9 @@
     transform: translateY(-3px);
     text-shadow: 0 0 15px rgba(58, 245, 242, 0.5);
 }
-
+.title-section .name ul li:nth-child(15) {
+    margin-left: 3%;
+}
 /* sous-titre  */
 .title-section .subtitle {
     text-align: center;
