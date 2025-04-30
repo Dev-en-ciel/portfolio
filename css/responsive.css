@@ -47,7 +47,8 @@
         min-height: 45vh;
     }
     .title-section .name ul {
-        width: 85%;
+        width: 80%;
+        margin: 0 10% 0 10%
     };
     
     .card {
