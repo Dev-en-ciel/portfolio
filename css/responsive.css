@@ -1,9 +1,15 @@
 /* ========== VERSION MOBILE ========== */
 @media (max-width: 991px) {
-    .title-section .name ul li{
-        font-size: 1.8rem;
+    .title-section .name ul {
+        width: 45%;
     }
-    
+    .title-section .name ul li{
+        font-size: 1.6rem;
+    }
+    .title-section .name ul li:nth-child(15) {
+        margin-left: 5%;
+        font-weight: 900;
+    }
     .mobile-menu-btn {
         /* display: none; Afficher le burger */
     }
@@ -38,8 +44,11 @@
 /* Version Mobile - en dessous de 768px */
 @media (max-width: 768px) {
     .title-section {
-        min-height: 50vh;
+        min-height: 45vh;
     }
+    .title-section .name ul {
+        width: 85%;
+    };
     
     .card {
         height: 250px;
