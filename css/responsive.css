@@ -1,5 +1,9 @@
 /* ========== VERSION MOBILE ========== */
 @media (max-width: 991px) {
+    .title-section .name ul li{
+        font-size: 1.8rem;
+    }
+    
     .mobile-menu-btn {
         /* display: none; Afficher le burger */
     }
