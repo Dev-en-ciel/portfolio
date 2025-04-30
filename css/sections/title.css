@@ -32,8 +32,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* margin-top: 100px; */
-    /* padding: 2rem; */
     z-index: 2;
 }
 
@@ -49,7 +47,8 @@
 /* ul lettres du nom */
 .title-section .name ul {
     display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
+    flex-wrap: nowrap;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -79,7 +78,7 @@
 
 /* sous-titre  */
 .title-section .subtitle {
-    text-align: left;
+    text-align: center;
     font-size: clamp(1.1rem, 1.5vw, 1.5rem);
     font-weight: 500;
     color: #e0f7fa;
@@ -87,5 +86,5 @@
     letter-spacing: 1.5px;
     line-height: 1.6;
     opacity: 0.9;
-    max-width: 80%;
+    max-width: 85%;
 }
